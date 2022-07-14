@@ -1,0 +1,38 @@
+Rendering means displaying something in application UI.
+
+1. What are React Elements?
+-- Elements are the building block of react app.
+-- React Elements are very similar to HTML elements.
+-- comprised of JSX tag, attributes, child or values and closing tag too.(very similar to HTML Element right?)
+-- Example: const element = <h1>Hello, world</h1>
+
+2. Why only similar? Isn't all the tags and Elements or HTML and JSX are same?
+-- Not every tags and elements in HTML are JSX tags and elements.
+-- There are some changes to avoid colliding with JavaScript reserved keyword.
+
+3. Are React Element and React Component same?
+-- No they are not. React Component is made oup of React Elements.
+
+4. SOME Concepts:
+-- Applications built with just React usually have a single root DOM node.
+-- Index.html is the file that browsers runs for UI.
+-- There is div tag with id= root inside that file, where we have to render all our Components(collection of elements)
+   and Elements (we will focus on rendering elements for now).
+-- That div will be our DOM node.
+-- We need to render our Elements there.
+
+
+4. Now How to render React Element?
+-- To render a React element, firstly, we need to pass the DOM element to ReactDOM.createRoot(), then pass the React
+   element to root.render()
+-- div with id 'root' is our DOM so, this is how we pass our DOM:
+   const root = ReactDOM.createRoot(document.getElementById('root');
+-- NOW, to render:
+   const element = <h1>Hello, world</h1>;
+   root.render(element);
+);
+
+5. More Concepts:
+-- React Elements are immutable, meaning we cannot change its children or attributes after once created.
+-- The only way to update the React Element is to create a new element, and pass it to root.render().
+-- ReactDOM updates only the changed node immediately. Therefore, React applications do not need refresh.

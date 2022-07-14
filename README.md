@@ -1,0 +1,1 @@
+Read NOTE.txt file for concepts and Open App.js for code demostrattion on how to render React Element/JSX.
